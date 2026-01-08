@@ -355,7 +355,7 @@ portfolioConfirmClose.addEventListener("click", closePortfolioConfirm);
 portfolioConfirmCancel.addEventListener("click", closePortfolioConfirm);
 portfolioConfirmYes.addEventListener("click", () => {
   window.open(
-    "https://andrew-fernando-15.github.io/portfolio1/index.html",
+    "https://andrew-fernando-15.github.io/portfolio-practice/index.html",
     "_blank"
   );
   closePortfolioConfirm();
@@ -523,7 +523,7 @@ startMenu.addEventListener("click", (event) => {
 
 // Start menu items
 const startGithub = document.getElementById("start-github");
-const startPortfolio1 = document.getElementById("start-portfolio1");
+const startportfolio-practice = document.getElementById("start-portfolio-practice");
 const startInstagram = document.getElementById("start-instagram");
 const startLinkedin = document.getElementById("start-linkedin");
 const startAbout = document.getElementById("start-about");
@@ -538,8 +538,8 @@ if (startGithub) {
   });
 }
 
-if (startPortfolio1) {
-  startPortfolio1.addEventListener("click", (event) => {
+if (startportfolio-practice) {
+  startportfolio-practice.addEventListener("click", (event) => {
     event.stopPropagation();
     openPortfolioConfirm();
   });
