@@ -1,5 +1,5 @@
-# 🪟 AndrewXP – Windows XP Web Desktop
-
+# AndrewXP – Windows XP Web Desktop
+![Portfolio Screenshot](images/Portfolio_website.png)
 A nostalgic, fully interactive Windows XP–style **web desktop** that doubles as my developer portfolio.  
 It recreates the classic XP experience with a Start menu, taskbar, draggable windows, an XP power dialog, and a playful Command Prompt.
 
