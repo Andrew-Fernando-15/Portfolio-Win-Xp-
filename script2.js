@@ -775,7 +775,7 @@ function handleCommand(raw) {
     case "open portfolio":
       appendCmdLine("Opening Portfolio in a new tab...");
       window.open(
-        "https://andrew-fernando-15.github.io/portfolio1/index.html",
+        "https://andrew-fernando-15.github.io/portfolio-practice/index.html",
         "_blank"
       );
       appendPrompt();
