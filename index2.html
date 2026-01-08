@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Windows XP Desktop</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <div id="desktop">
+    <!-- Desktop icons -->
+    <div class="icon-column">
+      <button class="desktop-icon" id="icon-git">
+        <img src="icon/git.png" alt="Git" />
+        <span>Git</span>
+      </button>
+
+      <button class="desktop-icon" id="icon-portfolio">
+        <img src="icon/website.png" alt="My Portfolio" />
+        <span>My Portfolio</span>
+      </button>
+
+      <button class="desktop-icon" id="icon-cv">
+        <img src="icon/pdf.png" alt="AndrewFernandoCV.pdf" />
+        <span>Andrew_CV.pdf</span>
+      </button>
+    </div>
+
+    <!-- CV window -->
+    <div id="cv-window" class="window hidden cv-window">
+      <div class="window-titlebar">
+        <span class="window-title">Andrew_Fernando_CV.pdf</span>
+        <div class="window-controls">
+          <button class="window-btn" id="cv-minimize">_</button>
+          <button class="window-btn" id="cv-maximize">▢</button>
+          <button class="window-close" id="cv-close">X</button>
+        </div>
+      </div>
+
+      <div class="cv-toolbar">
+        <button id="cv-zoom-out">-</button>
+        <span class="cv-zoom-label">Zoom</span>
+        <button id="cv-zoom-in">+</button>
+
+        <a
+          id="cv-download"
+          href="Andrew Fernando CV.pdf"
+          download="Andrew Fernando CV.pdf"
+        >Download</a>
+      </div>
+
+      <div class="window-body cv-body">
+        <iframe
+          id="cv-frame"
+          src="Andrew Fernando CV.pdf#toolbar=0&navpanes=0&statusbar=0"
+          class="cv-frame"
+          title="Andrew Fernando CV"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- GitHub link popup -->
+    <div id="git-confirm-window" class="window hidden link-confirm-small">
+      <div class="window-titlebar" id="git-confirm-titlebar">
+        <span class="window-title">Open link</span>
+        <div class="window-controls">
+          <button class="window-close" id="git-confirm-close">X</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p class="link-confirm-main">Open link to GitHub</p>
+        <img src="icon/git.png" alt="GitHub" class="link-confirm-icon-center" />
+        <p class="link-confirm-sub">
+          Open Andrew's Github profile in a new tab?
+        </p>
+        <div class="link-confirm-buttons">
+          <button id="git-confirm-cancel">Cancel</button>
+          <button id="git-confirm-yes">Yes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio link popup -->
+    <div id="portfolio-confirm-window" class="window hidden link-confirm-small">
+      <div class="window-titlebar" id="portfolio-confirm-titlebar">
+        <span class="window-title">Open link</span>
+        <div class="window-controls">
+          <button class="window-close" id="portfolio-confirm-close">X</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p class="link-confirm-main">Open link to Portfolio</p>
+        <img src="icon/website.png" alt="Portfolio" class="link-confirm-icon-center" />
+        <p class="link-confirm-sub">
+          Are you sure you want to open portfolio site?
+        </p>
+        <div class="link-confirm-buttons">
+          <button id="portfolio-confirm-cancel">Cancel</button>
+          <button id="portfolio-confirm-yes">Yes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instagram link popup -->
+    <div id="instagram-confirm-window" class="window hidden link-confirm-small">
+      <div class="window-titlebar" id="instagram-confirm-titlebar">
+        <span class="window-title">Open link</span>
+        <div class="window-controls">
+          <button class="window-close" id="instagram-confirm-close">X</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p class="link-confirm-main">Open link to Instagram</p>
+        <img src="icon/Instagram.jpg" alt="Instagram" class="link-confirm-icon-center" />
+        <p class="link-confirm-sub">
+          Open Andrew's Instagram profile in a new tab?
+        </p>
+        <div class="link-confirm-buttons">
+          <button id="instagram-confirm-cancel">Cancel</button>
+          <button id="instagram-confirm-yes">Yes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LinkedIn link popup -->
+    <div id="linkedin-confirm-window" class="window hidden link-confirm-small">
+      <div class="window-titlebar" id="linkedin-confirm-titlebar">
+        <span class="window-title">Open link</span>
+        <div class="window-controls">
+          <button class="window-close" id="linkedin-confirm-close">X</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <p class="link-confirm-main">Open link to LinkedIn</p>
+        <img src="icon/linkedin.png" alt="LinkedIn" class="link-confirm-icon-center" />
+        <p class="link-confirm-sub">
+          Open Andrew's LinkedIn profile in a new tab?
+        </p>
+        <div class="link-confirm-buttons">
+          <button id="linkedin-confirm-cancel">Cancel</button>
+          <button id="linkedin-confirm-yes">Yes</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Me window -->
+    <div id="about-window" class="window hidden">
+      <div class="window-titlebar" id="about-titlebar">
+        <span class="window-title">About AndrewXP</span>
+        <div class="window-controls">
+          <button class="window-btn" id="about-minimize">_</button>
+          <button class="window-btn" id="about-maximize">▢</button>
+          <button class="window-close" id="about-close">X</button>
+        </div>
+      </div>
+      <div class="window-body">
+        <h3>About Andrew</h3>
+        <p>
+          Andrew is a Computer Engineering student from Mumbai who enjoys building playful web experiences,
+          XP-inspired UIs, games, and interactive portfolio projects.
+        </p>
+        <p>
+          This mini OS is part of his portfolio to showcase front-end, UI, and creative coding skills.
+        </p>
+      </div>
+    </div>
+
+    <!-- Command Prompt window -->
+    <div id="cmd-window" class="window hidden cmd-window">
+      <div class="window-titlebar" id="cmd-titlebar">
+        <span class="window-title">C:\WINDOWS\system32\cmd.exe</span>
+        <div class="window-controls">
+          <button class="window-btn" id="cmd-minimize">_</button>
+          <button class="window-btn" id="cmd-maximize">▢</button>
+          <button class="window-close" id="cmd-close">X</button>
+        </div>
+      </div>
+
+      <div class="window-body cmd-body">
+        <div id="cmd-output" class="cmd-output"></div>
+      </div>
+    </div>
+
+    <!-- XP-style Turn off computer overlay using your button PNGs -->
+    <div id="power-overlay" class="hidden">
+      <div class="power-backdrop"></div>
+
+      <div class="power-dialog">
+        <div class="power-dialog-header">
+          <span>Turn off computer</span>
+          <div class="power-dialog-logo"></div>
+        </div>
+
+
+        <div class="power-dialog-body">
+          <!-- Stand By (use log_off.png) -->
+          <button class="power-tile" id="popup-standby">
+            <img src="icon/log_off.png" alt="Stand By" class="power-tile-icon" />
+            <span class="power-tile-label">Log Off</span>
+          </button>
+
+          <!-- Turn Off (use poweroff.png) -->
+          <button class="power-tile" id="popup-turnoff">
+            <img src="icon/poweroff.png" alt="Turn Off" class="power-tile-icon" />
+            <span class="power-tile-label">Shutdown</span>
+          </button>
+
+          <!-- Restart (use restart.png) -->
+          <button class="power-tile" id="popup-restart">
+            <img src="icon/restart.png" alt="Restart" class="power-tile-icon" />
+            <span class="power-tile-label">Restart</span>
+          </button>
+        </div>
+
+        <div class="power-dialog-footer">
+          <button class="power-cancel-btn" id="popup-cancel">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Taskbar -->
+    <div id="taskbar">
+      <div class="taskbar-start">
+        <button class="start-button" id="start-button">
+          <img src="icon/start-menu.jpg" alt="" class="start-logo-icon" />
+          <span class="start-text">Start</span>
+        </button>
+      </div>
+
+      <div class="taskbar-middle">
+        <button id="task-cv" class="task-button hidden">AndrewCV.pdf</button>
+        <button id="task-git" class="task-button hidden">GitHub</button>
+        <button id="task-portfolio" class="task-button hidden">Portfolio</button>
+        <button id="task-instagram" class="task-button hidden">Instagram</button>
+        <button id="task-linkedin" class="task-button hidden">LinkedIn</button>
+        <button id="task-cmd" class="task-button hidden">Command Prompt</button>
+      </div>
+
+      <div class="taskbar-tray">
+        <span class="tray-date"></span>
+        <span class="tray-clock">10:10 PM</span>
+      </div>
+    </div>
+
+    <!-- Start menu -->
+    <div id="start-menu" class="start-menu hidden">
+      <div class="start-menu-inner">
+        <div class="start-menu-header">
+          <div class="start-user-avatar"></div>
+          <span class="start-user-name">Andrew Fernando</span>
+        </div>
+
+        <div class="start-menu-content">
+          <div class="start-left-pane">
+            <button class="start-left-item">
+              <img src="icon/project.png" alt="" class="start-item-icon" />
+              <span class="start-item-text">
+                My Projects<br><span class="sub">View my work</span>
+              </span>
+            </button>
+
+            <button class="start-left-item">
+              <img src="icon/contact.png" alt="" class="start-item-icon" />
+              <span class="start-item-text">
+                Contact Me<br><span class="sub">Send me a message</span>
+              </span>
+            </button>
+
+            <button class="start-left-item" id="start-about">
+              <img src="icon/Aboutme.png" alt="" class="start-item-icon" />
+              <span class="start-item-text">About Me</span>
+            </button>
+
+            <button class="start-left-item" id="start-portfolio1">
+              <img src="icon/website.png" alt="" class="start-item-icon" />
+              <span class="start-item-text">portfolio-1</span>
+            </button>
+
+            <button class="start-all-programs" id="start-all-programs">
+              All Programs ▶
+            </button>
+          </div>
+
+          <div class="start-right-pane">
+            <button class="start-right-item" id="start-github">
+              <img src="icon/git.png" alt="" class="start-item-icon" />
+              <span class="start-item-text">Github</span>
+            </button>
+
+            <button class="start-right-item" id="start-linkedin">
+              <img src="icon/linkedin.png" alt="" class="start-item-icon" />
+              <span class="start-item-text">LinkedIn</span>
+            </button>
+
+            <button class="start-right-item" id="start-instagram">
+              <img src="icon/Instagram.jpg" alt="" class="start-item-icon" />
+              <span class="start-item-text">Instagram</span>
+            </button>
+
+            <button class="start-right-item" id="start-cmd">
+              <img src="icon/cmd.png" alt="" class="start-item-icon" />
+              <span class="start-item-text">Command Prompt</span>
+            </button>
+
+            <!-- Bottom power group -->
+            <div class="start-right-power">
+              <button class="start-right-item" id="start-logoff">
+                <img src="icon/log_off.png" alt="" class="start-item-icon" />
+                <span class="start-item-text">Log Off</span>
+              </button>
+
+              <button class="start-right-item" id="start-restart">
+                <img src="icon/restart.png" alt="" class="start-item-icon" />
+                <span class="start-item-text">Restart</span>
+              </button>
+
+              <button class="start-right-item" id="start-shutdown">
+                <img src="icon/poweroff.png" alt="" class="start-item-icon" />
+                <span class="start-item-text">Shutdown</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
